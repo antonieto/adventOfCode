@@ -1,4 +1,5 @@
-use std::{env, fs, path::PathBuf};
+use std::fs;
+use super::util::get_path;
 
 static RED_CAP: i32 = 12;
 static GREEN_CAP: i32 = 13;
@@ -6,17 +7,10 @@ static BLUE_CAP: i32 = 14;
 
 const INPUT_PATH: &str = "src/day2/input.txt";
 
-fn get_path() -> PathBuf {
-    let current_path = env::current_dir()
-        .unwrap();
-    
-   let joined = current_path.join(INPUT_PATH);
-   joined
-}
 
 // Problem one
 pub fn main() {
-    let path = get_path();
+    let path = get_path(INPUT_PATH);
     let content = fs::read_to_string(path).expect("Could not open file");
 
     let lines = content.lines();
@@ -76,7 +70,7 @@ pub fn main() {
 
 // Solution to day two second problem
 pub fn second() {
-    let path = get_path();
+    let path = get_path(INPUT_PATH);
     let content = fs::read_to_string(path).expect("Could not open file");
 
     let lines = content.lines();
