@@ -5,7 +5,7 @@ static RED_CAP: i32 = 12;
 static GREEN_CAP: i32 = 13;
 static BLUE_CAP: i32 = 14;
 
-const INPUT_PATH: &str = "src/day2/input.txt";
+const INPUT_PATH: &str = "day2/input.txt";
 
 
 // Problem one

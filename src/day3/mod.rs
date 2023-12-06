@@ -1,6 +1,7 @@
 use super::util::get_path;
 use std::fs;
 
+// Pseudo code
 // We need a 2d array
 // sum = 0;
 // for i in nrows:
@@ -25,9 +26,8 @@ use std::fs;
 //                 pointer += 1;
 //              if should_sum:
 //                  sum += num;
-//
-//
-const INPUT_PATH: &str = "src/day3/input.txt";
+
+const INPUT_PATH: &str = "day3/input.txt";
 
 fn build_arr(source: &str) -> Vec<Vec<char>> {
     let mut arr: Vec<Vec<char>> = Vec::new();

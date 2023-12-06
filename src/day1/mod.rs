@@ -1,9 +1,10 @@
 use std::fs;
 use std::collections::HashMap;
 use std::string::String;
+use crate::util::get_path;
 
 pub fn main() {
-    let contents = fs::read_to_string("./puzzle.txt")
+    let contents = fs::read_to_string(get_path("day1/puzzle.txt"))
         .expect("Couldn't read file");
 
     let mut digits: HashMap<String, i32> = HashMap::new();
